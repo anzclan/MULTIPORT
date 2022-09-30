@@ -11,8 +11,8 @@ exit 1
 fi
 
 mkdir /etc/xray;
-wget https://raw.githubusercontent.com/fisabiliyusri/coba/main/nginx/nginx.sh && chmod +x nginx.sh && ./nginx.sh
-wget https://raw.githubusercontent.com/fisabiliyusri/coba/main/xray/xray.sh && chmod +x xray.sh && ./xray.sh
+wget https://raw.githubusercontent.com/anzclan/MULTIPORT/main/LITE/nginx.sh && chmod +x nginx.sh && ./nginx.sh
+wget https://raw.githubusercontent.com/anzclan/MULTIPORT/main/LITE/XRAY/install-xray.sh && chmod +x install-xray.sh && ./install-xray.sh
 
 sleep 1
 echo -e "[ ${green}SERVICE${NC} ] Restart All service"
