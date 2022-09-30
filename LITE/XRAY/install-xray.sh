@@ -345,8 +345,7 @@ LimitNOFILE=1000000
 WantedBy=multi-user.target
 
 EOF
-systemctl stop runn
-rm -rf /etc/systemd/system/runn.service
+
 cat > /etc/systemd/system/superxray.service <<EOF
 [Unit]
 Description=superxray multi port
