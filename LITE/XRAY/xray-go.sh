@@ -16,7 +16,7 @@ sleep 1
 #
 systemctl enable chrony
 systemctl restart chrony
-timedatectl set-timezone Asia/Jakarta
+timedatectl set-timezone Asia/Kuala_Lumpur
 sleep 1
 #
 chronyc sourcestats -v
