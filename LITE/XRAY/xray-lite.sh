@@ -338,7 +338,7 @@ Restart=on-abort
 [Install]
 WantedBy=multi-user.target
 EOF
-apt purge curl unzip
+apt purge curl unzip -y
 sleep 4
 # Restart Service
 sleep 1
