@@ -1,36 +1,20 @@
 #!/bin/bash
-MYIP=$(wget -qO- ipinfo.io/ip);
-clear
+
 domain=$(cat /etc/xray/domain)
 
 apt install iptables iptables-persistent -y
-sleep 1
-
-ntpdate pool.ntp.org 
-timedatectl set-ntp true
-sleep 1
-
-systemctl enable chronyd
-systemctl restart chronyd
-sleep 1
-#
-systemctl enable chrony
-systemctl restart chrony
-timedatectl set-timezone Asia/Kuala_Lumpur
-sleep 1
-#
-chronyc sourcestats -v
-chronyc tracking -v
-#
-apt clean all && apt update
-apt install curl socat xz-utils wget apt-transport-https gnupg gnupg2 gnupg1 dnsutils lsb-release -y 
+apt install curl socat xz-utils wget apt-transport-https gnupg gnupg2 gnupg1 dnsutils lsb-release -y
 apt install socat cron bash-completion ntpdate -y
 ntpdate pool.ntp.org
 apt -y install chrony
-apt install zip -y
-apt install curl pwgen openssl netcat cron -y
+timedatectl set-ntp true
+systemctl enable chronyd && systemctl restart chronyd
+systemctl enable chrony && systemctl restart chrony
+timedatectl set-timezone Asia/Kuala_Lumpur
+chronyc sourcestats -v
+chronyc tracking -v
+date
 
-# install xray
 sleep 1
 domainSock_dir="/run/xray";! [ -d $domainSock_dir ] && mkdir  $domainSock_dir
 chown www-data.www-data $domainSock_dir
@@ -43,32 +27,21 @@ touch /var/log/xray/access.log
 touch /var/log/xray/error.log
 touch /var/log/xray/access2.log
 touch /var/log/xray/error2.log
-# / / Ambil Xray Core Version Terbaru
-#bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u www-data --version 1.5.6
-
-# / / Ambil Xray Core Version Terbaru
 latest_version="$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases | grep tag_name | sed -E 's/.*"v(.*)".*/\1/' | head -n 1)"
-
-# / / Installation Xray Core
 xraycore_link="https://github.com/XTLS/Xray-core/releases/download/v$latest_version/xray-linux-64.zip"
 
-# / / Make Main Directory
 mkdir -p /usr/bin/xray
 mkdir -p /usr/local/etc/xray
-# / / Unzip Xray Linux 64
 cd `mktemp -d`
 curl -sL "$xraycore_link" -o xray.zip
 unzip -q xray.zip && rm -rf xray.zip
 mv xray /usr/local/bin/xray
 chmod +x /usr/local/bin/xray
 
-## hapus
 rm -rf /etc/nginx/conf.d/alone.conf
-# stop
 /etc/init.d/nginx stop
 systemctl stop nginx
 
-# / / Ambil Xray Core Version Terbaru
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u www-data --version 1.5.6
 
 
