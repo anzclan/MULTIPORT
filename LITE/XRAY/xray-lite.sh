@@ -338,7 +338,8 @@ Restart=on-abort
 [Install]
 WantedBy=multi-user.target
 EOF
-
+apt purge curl unzip
+sleep 4
 # Restart Service
 sleep 1
 systemctl daemon-reload
@@ -350,4 +351,4 @@ systemctl restart nginx
 systemctl enable superxray
 systemctl restart superxray
 
-sleep 1
+sleep 3
