@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "$INFO Cecking Update File"
+echo -e "$BLUE│${NC} $INFO Cecking Update File"
 sleep 2
-echo -e "$INFO Download Update File"
+echo -e "$BLUE│${NC} $INFO Download Update File"
 sleep 2
-echo -e "$INFO Updating In Progress"
+echo -e "$BLUE│${NC} $INFO Updating In Progress"
 
