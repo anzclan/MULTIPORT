@@ -9,5 +9,5 @@ GO TO >> https://github.com/anzclan/MULTIPORT/tree/main/TOOL/ROOT
 ## ENC SHELL SCRIPT
 GO TO >> https://github.com/anzclan/MULTIPORT/tree/main/TOOL/ENC
 
-
-### SUCK MA DICK TO ALL WHO STOLE  MY SCRIPT / OLD SCFRIP [MULTIWS] : YOUR A FUCKING STUPID PIGGY
+-----------------------------------------------------------------------------------------------
+# SUCK MA DICK TO ALL WHO STOLE  MY SCRIPT / OLD SCRIPT [MULTIWS] : YOUR A FUCKING STUPID PIGGY
