@@ -13,5 +13,5 @@ cxthhhhh.com</code></pre>
 
 ## FIX ERROOR UPDATE
 <pre><code>
-ps aux | grep -i apt
+ps aux | grep -i apt && apt update && apt upgrade -y
 </code></pre>
