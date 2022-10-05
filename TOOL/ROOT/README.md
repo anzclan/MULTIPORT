@@ -9,7 +9,7 @@ wget --no-check-certificate -qO ~/Network-Reinstall-System-Modify.sh 'https://ww
 
 # U & P
 <pre><code>root
-cxthhhhh.comt</code></pre>
+cxthhhhh.com</code></pre>
 
 ## FIX ERROOR UPDATE
 <pre><code>
