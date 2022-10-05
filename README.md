@@ -2,7 +2,7 @@
 <img height=21 src="https://komarev.com/ghpvc/?username=anzclan">
 </p>
 <p align="center">
-<img src="https://raw.githubusercontent.com/anzclan/multiportws/main/photo_2022-08-29_12-20-01.jpg" />
+<img src="https://raw.githubusercontent.com/anzclan/MULTIPORT/main/IMG/GT.png" />
 </p>
 
 # MULTIPORT LITE VERSION
